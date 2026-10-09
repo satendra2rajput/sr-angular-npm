@@ -1,0 +1,50 @@
+@if (config.backdrop !== false) {
+
+<div class="ke-modal-backdrop" (click)="onBackdropClick()">
+
+    <div class="ke-modal" [class.ke-modal-sm]="config.size === 'sm'" [class.ke-modal-md]="config.size === 'md'"
+        [class.ke-modal-lg]="config.size === 'lg'" [class.ke-modal-xl]="config.size === 'xl'"
+        [class.ke-modal-full]="config.size === 'full'" [style.width]="config.width" [style.height]="config.height"
+        role="dialog" aria-modal="true" (click)="$event.stopPropagation()">
+
+        @if (config.showHeader !== false) {
+
+        <header class="ke-modal-header">
+
+            <h2 class="ke-modal-title">
+                {{ config.title }}
+            </h2>
+
+            @if (config.showCloseButton !== false) {
+
+            <button type="button" class="ke-modal-close" aria-label="Close modal" (click)="close()">
+                &times;
+            </button>
+
+            }
+
+        </header>
+
+        }
+
+        <section class="ke-modal-body">
+
+            <ng-container #modalContent></ng-container>
+
+        </section>
+
+        @if (config.showFooter) {
+
+        <footer class="ke-modal-footer">
+
+            <ng-content select="[modal-footer]"></ng-content>
+
+        </footer>
+
+        }
+
+    </div>
+
+</div>
+
+}

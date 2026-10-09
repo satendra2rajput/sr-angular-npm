@@ -1,0 +1,104 @@
+<button (click)="showSuccess()">Show Success Toast</button> <br><br>
+<button (click)="showError()">Show Error Toast</button> <br><br>
+<button (click)="showInfo()">Show Info Toast</button> <br><br>
+<button (click)="showWarning()">Show Warning Toast</button>
+
+<!-- <ke-toaster></ke-toaster>
+ -->
+<ke-loader />
+<br><br><br>
+
+<div class="loader-buttons">
+
+    <button (click)="load('spinner')">
+        01. Spinner
+    </button>
+
+    <button (click)="load('dots')">
+        02. Dots
+    </button>
+
+    <button (click)="load('bars')">
+        03. Bars
+    </button>
+
+    <button (click)="load('pulse')">
+        04. Pulse
+    </button>
+
+    <button (click)="load('ring')">
+        05. Ring
+    </button>
+
+    <button (click)="load('dual-ring')">
+        06. Dual Ring
+    </button>
+
+    <button (click)="load('ripple')">
+        07. Ripple
+    </button>
+
+    <button (click)="load('orbit')">
+        08. Orbit
+    </button>
+
+    <button (click)="load('bounce')">
+        09. Bounce
+    </button>
+
+    <button (click)="load('wave')">
+        10. Wave
+    </button>
+
+    <button (click)="load('snake')">
+        11. Snake
+    </button>
+
+    <button (click)="load('square')">
+        12. Square
+    </button>
+
+    <button (click)="load('cube')">
+        13. Cube
+    </button>
+
+    <button (click)="load('dots-wave')">
+        14. Dots Wave
+    </button>
+
+    <button (click)="load('progress')">
+        15. Progress
+    </button>
+
+    <button (click)="load('gradient-ring')">
+        16. Gradient Ring
+    </button>
+
+    <button (click)="load('ellipsis')">
+        17. Ellipsis
+    </button>
+
+    <button (click)="load('heartbeat')">
+        18. Heartbeat
+    </button>
+
+    <button (click)="load('stretch')">
+        19. Stretch
+    </button>
+
+    <button (click)="load('solar')">
+        20. Solar
+    </button>
+
+</div>
+
+<h2>User Form</h2>
+
+<input placeholder="Name" />
+
+<button (click)="save()">
+    Save
+</button>
+<button (click)="openUserForm()">
+    Add User
+</button>

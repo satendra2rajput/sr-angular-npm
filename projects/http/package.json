@@ -1,0 +1,51 @@
+{
+  "name": "@kudoengineer/http",
+  "version": "1.0.0",
+  "description": "Modern, lightweight and production-ready HTTP client library for Angular with base URL configuration, authentication, retry, timeout, cancellation, caching, request deduplication, request IDs, logging and reactive Signals support.",
+  "keywords": [
+    "angular",
+    "angular-http",
+    "angular-http-client",
+    "http-client",
+    "http",
+    "rest-api",
+    "rest-client",
+    "api-client",
+    "angular-api",
+    "angular-api-client",
+    "http-interceptor",
+    "authentication",
+    "token",
+    "jwt",
+    "retry",
+    "retry-policy",
+    "exponential-backoff",
+    "timeout",
+    "request-cancellation",
+    "abort-signal",
+    "http-cache",
+    "cache",
+    "request-deduplication",
+    "request-id",
+    "http-logging",
+    "angular-signals",
+    "signals",
+    "typescript",
+    "angular20",
+    "angular21",
+    "angular22",
+    "angular23",
+    "kudoengineer"
+  ],
+  "author": "Satendra Rajput",
+  "license": "MIT",
+  "homepage": "https://kudoengineer.com",
+  "peerDependencies": {
+    "@angular/common": "^20.0.0 || ^21.0.0 || ^22.0.0 || ^23.0.0",
+    "@angular/core": "^20.0.0 || ^21.0.0 || ^22.0.0 || ^23.0.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "sideEffects": false
+}

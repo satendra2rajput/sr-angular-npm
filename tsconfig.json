@@ -1,0 +1,104 @@
+/* To learn more about Typescript configuration file: https://www.typescriptlang.org/docs/handbook/tsconfig-json.html. */
+/* To learn more about Angular compiler options: https://angular.dev/reference/configs/angular-compiler-options. */
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "skipLibCheck": true,
+    "isolatedModules": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "ES2022",
+    "module": "preserve",
+    "paths": {
+      "@kudoengineer/toast": ["./dist/toast"],
+      "forms": ["./dist/forms"],
+      "http": ["./dist/http"],
+      "loader": ["./dist/loader"],
+      "modal": ["./dist/modal"],
+      "permission": ["./dist/permission"],
+      "seo": ["./dist/seo"],
+      "storage": ["./dist/storage"],
+      "theme": ["./dist/theme"],
+      "toast": ["./dist/toast"],
+      "validator": ["./dist/validator"]
+    }
+  },
+  "angularCompilerOptions": {
+    "enableI18nLegacyMessageIdFormat": false,
+    "strictInjectionParameters": true,
+    "strictInputAccessModifiers": true
+  },
+  "files": [],
+  "references": [
+    {
+      "path": "./projects/toast/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/toast/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/playground/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/playground/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/loader/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/loader/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/seo/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/seo/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/storage/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/storage/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/modal/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/modal/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/permission/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/permission/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/http/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/http/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/theme/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/theme/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/validator/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/validator/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/forms/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/forms/tsconfig.spec.json"
+    }
+  ]
+}

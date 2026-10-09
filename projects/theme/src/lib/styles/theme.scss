@@ -1,0 +1,69 @@
+@use './variables';
+@use './light';
+@use './dark';
+
+/* ========================================
+   KudoEngineer Theme
+   ======================================== */
+
+:root {
+  font-family: var(--ke-font-family);
+
+  color: var(--ke-text);
+  background-color: var(--ke-background);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+/* ========================================
+   Global Theme Utilities
+   ======================================== */
+
+.ke-theme-light,
+.ke-theme-dark {
+  color: var(--ke-text);
+  background-color: var(--ke-background);
+}
+
+/* ========================================
+   Selection
+   ======================================== */
+
+.ke-theme-light ::selection,
+.ke-theme-dark ::selection {
+  background: var(--ke-primary);
+  color: #ffffff;
+}
+
+/* ========================================
+   Focus
+   ======================================== */
+
+.ke-theme-light :focus-visible,
+.ke-theme-dark :focus-visible {
+  outline: 2px solid var(--ke-primary);
+  outline-offset: 2px;
+}
+
+/* ========================================
+   Reduced Motion
+   ======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}

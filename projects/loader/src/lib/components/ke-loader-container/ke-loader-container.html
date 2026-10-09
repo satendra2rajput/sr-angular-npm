@@ -1,0 +1,175 @@
+@if (visible()) {
+<div class="kudo-loader" [class.kudo-loader--overlay]="options().overlay" [style.--kudo-loader-color]="options().color"
+    [style.--kudo-loader-overlay-opacity]="options().overlayOpacity">
+
+    <div class="kudo-loader__content" [class.kudo-loader__content--container]="options().showContainer">
+
+        @switch (options().type) {
+
+        <!-- 01. Spinner -->
+        @case ('spinner') {
+        <div class="kudo-spinner"></div>
+        }
+
+        <!-- 02. Dots -->
+        @case ('dots') {
+        <div class="kudo-dots">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        }
+
+        <!-- 03. Bars -->
+        @case ('bars') {
+        <div class="kudo-bars">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        }
+
+        <!-- 04. Pulse -->
+        @case ('pulse') {
+        <div class="kudo-pulse"></div>
+        }
+
+        <!-- 05. Ring -->
+        @case ('ring') {
+        <div class="kudo-ring"></div>
+        }
+
+        <!-- 06. Dual Ring -->
+        @case ('dual-ring') {
+        <div class="kudo-dual-ring"></div>
+        }
+
+        <!-- 07. Ripple -->
+        @case ('ripple') {
+        <div class="kudo-ripple">
+            <span></span>
+            <span></span>
+        </div>
+        }
+
+        <!-- 08. Orbit -->
+        @case ('orbit') {
+        <div class="kudo-orbit">
+            <span></span>
+        </div>
+        }
+
+        <!-- 09. Bounce -->
+        @case ('bounce') {
+        <div class="kudo-bounce">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        }
+
+        <!-- 10. Wave -->
+        @case ('wave') {
+        <div class="kudo-wave">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        }
+
+        <!-- 11. Snake -->
+        @case ('snake') {
+        <div class="kudo-snake">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        }
+
+        <!-- 12. Square -->
+        @case ('square') {
+        <div class="kudo-square"></div>
+        }
+
+        <!-- 13. Cube -->
+        @case ('cube') {
+        <div class="kudo-cube">
+            <div></div>
+        </div>
+        }
+
+        <!-- 14. Dots Wave -->
+        @case ('dots-wave') {
+        <div class="kudo-dots-wave">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        }
+
+        <!-- 15. Progress -->
+        @case ('progress') {
+        <div class="kudo-progress">
+            <span></span>
+        </div>
+        }
+
+        <!-- 16. Gradient Ring -->
+        @case ('gradient-ring') {
+        <div class="kudo-gradient-ring"></div>
+        }
+
+        <!-- 17. Ellipsis -->
+        @case ('ellipsis') {
+        <div class="kudo-ellipsis">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        }
+
+        <!-- 18. Heartbeat -->
+        @case ('heartbeat') {
+        <div class="kudo-heartbeat">
+            ♥
+        </div>
+        }
+
+        <!-- 19. Stretch -->
+        @case ('stretch') {
+        <div class="kudo-stretch">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        }
+
+        <!-- 20. Solar -->
+        @case ('solar') {
+        <div class="kudo-solar">
+            <span></span>
+        </div>
+        }
+
+        }
+
+        @if (options().text) {
+        <div class="kudo-loader__text">
+            {{ options().text }}
+        </div>
+        }
+
+    </div>
+
+</div>
+}

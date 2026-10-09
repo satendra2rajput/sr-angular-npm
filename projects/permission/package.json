@@ -1,0 +1,22 @@
+{
+  "name": "@kudoengineer/permission",
+  "version": "1.0.0",
+  "description": "Lightweight permission and role-based access control library for Angular applications.",
+  "keywords": [
+    "angular",
+    "permission",
+    "role",
+    "rbac",
+    "access-control",
+    "authorization",
+    "guard",
+    "directive",
+    "signals",
+    "kudoengineer"
+  ],
+  "peerDependencies": {
+    "@angular/common": "^20.0.0 || ^21.0.0 || ^22.0.0 || ^23.0.0",
+    "@angular/core": "^20.0.0 || ^21.0.0 || ^22.0.0 || ^23.0.0",
+    "@angular/router": "^20.0.0 || ^21.0.0 || ^22.0.0 || ^23.0.0"
+  }
+}

@@ -1,0 +1,114 @@
+:root {
+  /* ========================================
+     Colors
+     ======================================== */
+
+  --ke-primary: #2563eb;
+  --ke-primary-hover: #1d4ed8;
+  --ke-primary-active: #1e40af;
+
+  --ke-secondary: #4f46e5;
+  --ke-secondary-hover: #4338ca;
+  --ke-secondary-active: #3730a3;
+
+  --ke-accent: #7c3aed;
+
+  --ke-background: #ffffff;
+  --ke-surface: #f9fafb;
+  --ke-surface-hover: #f3f4f6;
+
+  --ke-foreground: #111827;
+  --ke-text: #111827;
+  --ke-text-muted: #6b7280;
+  --ke-text-disabled: #9ca3af;
+
+  --ke-border: #e5e7eb;
+  --ke-divider: #e5e7eb;
+
+  --ke-success: #16a34a;
+  --ke-warning: #d97706;
+  --ke-danger: #dc2626;
+  --ke-info: #0284c7;
+
+  --ke-overlay: rgba(0, 0, 0, 0.5);
+
+  /* ========================================
+     Typography
+     ======================================== */
+
+  --ke-font-family: Inter, Roboto, Arial, sans-serif;
+
+  --ke-font-size-xs: 0.75rem;
+  --ke-font-size-sm: 0.875rem;
+  --ke-font-size-md: 1rem;
+  --ke-font-size-lg: 1.125rem;
+  --ke-font-size-xl: 1.25rem;
+  --ke-font-size-2xl: 1.5rem;
+  --ke-font-size-3xl: 1.875rem;
+  --ke-font-size-4xl: 2.25rem;
+
+  --ke-font-weight-regular: 400;
+  --ke-font-weight-medium: 500;
+  --ke-font-weight-semibold: 600;
+  --ke-font-weight-bold: 700;
+
+  --ke-line-height-tight: 1.25;
+  --ke-line-height-normal: 1.5;
+  --ke-line-height-relaxed: 1.75;
+
+  --ke-letter-spacing-tight: -0.025em;
+  --ke-letter-spacing-normal: 0;
+  --ke-letter-spacing-wide: 0.025em;
+
+  /* ========================================
+     Spacing
+     ======================================== */
+
+  --ke-space-none: 0;
+  --ke-space-xs: 0.25rem;
+  --ke-space-sm: 0.5rem;
+  --ke-space-md: 1rem;
+  --ke-space-lg: 1.5rem;
+  --ke-space-xl: 2rem;
+  --ke-space-xxl: 3rem;
+  --ke-space-3xl: 4rem;
+  --ke-space-4xl: 5rem;
+  --ke-space-5xl: 6rem;
+  --ke-space-6xl: 8rem;
+
+  --ke-space-section: 4rem;
+  --ke-space-container: 1200px;
+
+  /* ========================================
+     Border Radius
+     ======================================== */
+
+  --ke-radius-none: 0;
+  --ke-radius-xs: 0.125rem;
+  --ke-radius-sm: 0.25rem;
+  --ke-radius-md: 0.5rem;
+  --ke-radius-lg: 0.75rem;
+  --ke-radius-xl: 1rem;
+  --ke-radius-xxl: 1.5rem;
+  --ke-radius-full: 9999px;
+
+  /* ========================================
+     Shadows
+     ======================================== */
+
+  --ke-shadow-none: none;
+
+  --ke-shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.05);
+
+  --ke-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+
+  --ke-shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+
+  --ke-shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.05);
+
+  --ke-shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1), 0 10px 10px rgba(0, 0, 0, 0.04);
+
+  --ke-shadow-xxl: 0 25px 50px rgba(0, 0, 0, 0.15);
+
+  --ke-shadow-inner: inset 0 2px 4px rgba(0, 0, 0, 0.06);
+}

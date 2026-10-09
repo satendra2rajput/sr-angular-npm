@@ -1,0 +1,39 @@
+{
+  "name": "@kudoengineer/theme",
+  "version": "1.0.0",
+  "description": "Modern, lightweight and production-ready theme management library for Angular with Light, Dark and System theme support.",
+  "keywords": [
+    "angular",
+    "angular-theme",
+    "angular-dark-mode",
+    "dark-mode",
+    "light-mode",
+    "theme",
+    "theme-manager",
+    "theme-service",
+    "design-tokens",
+    "css-variables",
+    "angular-signals",
+    "angular-ssr",
+    "typescript",
+    "kudoengineer"
+  ],
+  "author": "Satendra Rajput",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kudoengineer"
+  },
+  "homepage": "https://kudoengineer.com",
+  "bugs": {
+    "url": "https://github.com/kudoengineer"
+  },
+  "sideEffects": [
+    "*.scss",
+    "*.css"
+  ],
+  "peerDependencies": {
+    "@angular/common": "^20.0.0 || ^21.0.0 || ^22.0.0 || ^23.0.0",
+    "@angular/core": "^20.0.0 || ^21.0.0 || ^22.0.0 || ^23.0.0"
+  }
+}

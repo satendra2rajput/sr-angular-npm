@@ -1,0 +1,32 @@
+{
+  "name": "@kudoengineer/loader",
+  "version": "1.0.1",
+  "description": "Modern, lightweight and customizable loader library for Angular with 20 loader types, manual control, HTTP interceptor support, custom colors and overlay options.",
+  "keywords": [
+    "angular",
+    "angular-loader",
+    "angular-loading",
+    "loader",
+    "loading",
+    "loading-spinner",
+    "spinner",
+    "angular20",
+    "angular21",
+    "angular22",
+    "angular23",
+    "http-interceptor",
+    "loading-indicator",
+    "kudoengineer"
+  ],
+  "author": "Satendra Rajput",
+  "license": "MIT",
+  "homepage": "https://kudoengineer.com",
+  "peerDependencies": {
+    "@angular/common": "^20.0.0 || ^21.0.0 || ^22.0.0 || ^23.0.0",
+    "@angular/core": "^20.0.0 || ^21.0.0 || ^22.0.0 || ^23.0.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "sideEffects": false
+}

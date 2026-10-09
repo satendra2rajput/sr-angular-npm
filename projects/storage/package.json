@@ -1,0 +1,35 @@
+{
+  "name": "@kudoengineer/storage",
+  "version": "1.0.1",
+  "description": "A lightweight, type-safe storage utility for Angular applications with LocalStorage, SessionStorage, TTL, prefix support and SSR safety.",
+  "keywords": [
+    "angular",
+    "angular20",
+    "angular21",
+    "angular22",
+    "angular23",
+    "storage",
+    "localstorage",
+    "sessionstorage",
+    "cookie",
+    "typescript",
+    "signals",
+    "ssr",
+    "kudoengineer"
+  ],
+  "author": "Satendra Rajput",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kudoengineer/kudoengineer-angular"
+  },
+  "homepage": "https://kudoengineer.com",
+  "peerDependencies": {
+    "@angular/common": "^20.0.0 || ^21.0.0 || ^22.0.0 || ^23.0.0",
+    "@angular/core": "^20.0.0 || ^21.0.0 || ^22.0.0 || ^23.0.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "sideEffects": false
+}

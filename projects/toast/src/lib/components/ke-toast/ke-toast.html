@@ -1,0 +1,37 @@
+<div class="ke-toast" [class]="toast.type">
+
+    <div class="icon">
+        <img [src]="toast.icon || getIcon(toast.type)" [alt]="toast.type" width="24" height="24" />
+    </div>
+
+    <div class="content">
+
+        @if (toast.title) {
+        <div class="title">
+            {{ toast.title }}
+        </div>
+        }
+
+        <div class="message">
+            {{ toast.message }}
+        </div>
+
+        @if (toast.action) {
+        <button class="action" (click)="onAction()">
+            {{ toast.action }}
+        </button>
+        }
+
+    </div>
+
+    @if (toast.closable) {
+    <button class="close" (click)="onClose()">
+        ✕
+    </button>
+    }
+
+    @if (toast.progressBar) {
+    <div class="progress"></div>
+    }
+
+</div>

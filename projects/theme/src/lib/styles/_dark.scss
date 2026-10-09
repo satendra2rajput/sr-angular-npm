@@ -1,0 +1,36 @@
+.ke-theme-dark {
+  /* ========================================
+     Colors
+     ======================================== */
+
+  --ke-primary: #3b82f6;
+  --ke-primary-hover: #60a5fa;
+  --ke-primary-active: #93c5fd;
+
+  --ke-secondary: #6366f1;
+  --ke-secondary-hover: #818cf8;
+  --ke-secondary-active: #a5b4fc;
+
+  --ke-accent: #8b5cf6;
+
+  --ke-background: #0f172a;
+  --ke-surface: #1e293b;
+  --ke-surface-hover: #334155;
+
+  --ke-foreground: #f8fafc;
+  --ke-text: #f8fafc;
+  --ke-text-muted: #94a3b8;
+  --ke-text-disabled: #64748b;
+
+  --ke-border: #334155;
+  --ke-divider: #334155;
+
+  --ke-success: #22c55e;
+  --ke-warning: #f59e0b;
+  --ke-danger: #ef4444;
+  --ke-info: #38bdf8;
+
+  --ke-overlay: rgba(0, 0, 0, 0.7);
+
+  color-scheme: dark;
+}

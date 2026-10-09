@@ -1,0 +1,23 @@
+{
+  "name": "@kudoengineer/toast",
+  "version": "22.0.4",
+  "description": "Modern toast notification library for Angular.",
+  "keywords": [
+    "angular",
+    "angular22",
+    "toast",
+    "notification",
+    "snackbar",
+    "kudoengineer"
+  ],
+  "author": "Satendra Rajput",
+  "license": "MIT",
+  "peerDependencies": {
+    "@angular/common": "^20.0.0 || ^21.0.0 || ^22.0.0",
+    "@angular/core": "^20.0.0 || ^21.0.0 || ^22.0.0"
+  },
+  "dependencies": {
+    "tslib": "^2.8.1"
+  },
+  "sideEffects": false
+}

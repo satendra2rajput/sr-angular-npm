@@ -1,0 +1,26 @@
+{
+  "name": "@kudoengineer/modal",
+  "version": "1.0.0",
+  "description": "Modern, lightweight and customizable modal dialog library for Angular.",
+  "keywords": [
+    "angular",
+    "angular-modal",
+    "angular-dialog",
+    "modal",
+    "dialog",
+    "popup",
+    "angular20",
+    "angular21",
+    "angular22",
+    "angular23",
+    "signals",
+    "standalone",
+    "kudoengineer"
+  ],
+  "author": "Satendra Rajput",
+  "license": "MIT",
+  "peerDependencies": {
+    "@angular/common": "^20.0.0 || ^21.0.0 || ^22.0.0 || ^23.0.0",
+    "@angular/core": "^20.0.0 || ^21.0.0 || ^22.0.0 || ^23.0.0"
+  }
+}

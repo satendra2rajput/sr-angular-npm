@@ -1,0 +1,25 @@
+{
+  "name": "@kudoengineer/forms",
+  "version": "0.0.1",
+  "description": "A modern Angular forms utility library with typed form helpers, builders, validation errors, form state, submission handling, reset, patch and value utilities.",
+  "keywords": [
+    "angular",
+    "angular-forms",
+    "reactive-forms",
+    "forms",
+    "form-builder",
+    "form-validation",
+    "typescript",
+    "kudoengineer"
+  ],
+  "peerDependencies": {
+    "@angular/common": "^20.0.0 || ^21.0.0 || ^22.0.0 || ^23.0.0",
+    "@angular/core": "^20.0.0 || ^21.0.0 || ^22.0.0 || ^23.0.0",
+    "@angular/forms": "^20.0.0 || ^21.0.0 || ^22.0.0 || ^23.0.0",
+    "rxjs": "^7.8.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "sideEffects": false
+}
