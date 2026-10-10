@@ -1,24 +1,28 @@
-import { Injectable } from '@angular/core';
-import { AbstractControl } from '@angular/forms';
+import { Injectable } from "@angular/core";
+import { AbstractControl } from "@angular/forms";
 
-import { Observable, firstValueFrom, isObservable } from 'rxjs';
+import { Observable, firstValueFrom, isObservable } from "rxjs";
 
-export interface KudoFormSubmitOptions {
+export interface SRFormSubmitOptions {
   markAllAsTouched?: boolean;
   resetAfterSuccess?: boolean;
   emitEventOnReset?: boolean;
 }
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: "root",
 })
-export class KudoFormSubmitService {
+export class SRFormSubmitService {
   async submit<T>(
     control: AbstractControl,
     callback: () => Promise<T> | Observable<T>,
-    options: KudoFormSubmitOptions = {},
+    options: SRFormSubmitOptions = {},
   ): Promise<T | null> {
-    const { markAllAsTouched = true, resetAfterSuccess = false, emitEventOnReset = true } = options;
+    const {
+      markAllAsTouched = true,
+      resetAfterSuccess = false,
+      emitEventOnReset = true,
+    } = options;
 
     if (markAllAsTouched) {
       control.markAllAsTouched();

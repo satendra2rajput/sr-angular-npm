@@ -1,10 +1,16 @@
-import { FormArray, FormControl, FormGroup, ValidatorFn, AsyncValidatorFn } from '@angular/forms';
-import { Injectable } from '@angular/core';
+import {
+  FormArray,
+  FormControl,
+  FormGroup,
+  ValidatorFn,
+  AsyncValidatorFn,
+} from "@angular/forms";
+import { Injectable } from "@angular/core";
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: "root",
 })
-export class KudoFormBuilderService {
+export class SRFormBuilderService {
   control<T>(
     value: T,
     validators: ValidatorFn[] = [],
@@ -22,7 +28,9 @@ export class KudoFormBuilderService {
     return new FormGroup(controls);
   }
 
-  array<T>(controls: Array<FormControl<T | null> | FormGroup | FormArray> = []): FormArray {
+  array<T>(
+    controls: Array<FormControl<T | null> | FormGroup | FormArray> = [],
+  ): FormArray {
     return new FormArray(controls);
   }
 

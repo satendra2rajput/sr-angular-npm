@@ -1,8 +1,8 @@
-# @kudoengineer/forms
+# @sr/forms
 
-A modern and reusable Angular Reactive Forms utility library for building, managing, validating, and submitting forms with less boilerplate.
+A modern, reusable Angular Reactive Forms utility library designed to simplify form creation, validation, state management, submission, and common form operations with less boilerplate.
 
-`@kudoengineer/forms` provides reusable form builders, control utilities, validation error handling, form state management, submission helpers, reset/patch utilities, and value helpers for Angular applications.
+`@sr/forms` provides reusable form builders, control utilities, validation error handling, signal-based form state management, submission helpers, reset and patch utilities, and form value helpers for Angular applications.
 
 ## ✨ Features
 
@@ -23,23 +23,19 @@ A modern and reusable Angular Reactive Forms utility library for building, manag
 ## 📦 Installation
 
 ```bash
-npm install @kudoengineer/forms
+npm install @sr/forms
 ```
 
 ## 🚀 Basic Usage
 
 ```typescript
-import {
-  KudoFormBuilderService,
-  KudoFormErrorService,
-  KudoFormStateService,
-} from '@kudoengineer/forms';
+import { SRFormBuilderService, SRFormErrorService, SRFormStateService } from '@sr/forms';
 
 export class UserComponent {
   constructor(
-    private formBuilder: KudoFormBuilderService,
-    private formErrors: KudoFormErrorService,
-    private formState: KudoFormStateService,
+    private formBuilder: SRFormBuilderService,
+    private formErrors: SRFormErrorService,
+    private formState: SRFormStateService,
   ) {}
 
   form = this.formBuilder.group({
@@ -51,11 +47,13 @@ export class UserComponent {
 
 ## 🏗️ Form Control Builder
 
+Create commonly used form controls with reusable builder methods.
+
 ```typescript
-import { KudoFormControlBuilderService } from '@kudoengineer/forms';
+import { SRFormControlBuilderService } from '@sr/forms';
 
 export class UserComponent {
-  constructor(private controls: KudoFormControlBuilderService) {}
+  constructor(private controls: SRFormControlBuilderService) {}
 
   name = this.controls.text();
 
@@ -69,10 +67,12 @@ export class UserComponent {
 
 ## ⚠️ Form Error Handling
 
-```typescript
-import { KudoFormErrorService } from '@kudoengineer/forms';
+Use the error service to retrieve validation errors from your form.
 
-const errors = this.formErrorService.getErrors(this.form);
+```typescript
+import { SRFormErrorService } from '@sr/forms';
+
+const errors = this.formErrors.getErrors(this.form);
 ```
 
 Example result:
@@ -90,30 +90,30 @@ Example result:
 Get the first form error:
 
 ```typescript
-const error = this.formErrorService.getFirstError(this.form);
+const error = this.formErrors.getFirstError(this.form);
 ```
 
-## 📊 Form State
+## 📊 Signal-Based Form State
 
-The library provides signal-based form state.
+Manage form state using Angular signals.
 
 ```typescript
-import { KudoFormStateService } from '@kudoengineer/forms';
+import { SRFormStateService } from '@sr/forms';
 
-state = this.formStateService.state();
+state = this.formState.state();
 
-valid = this.formStateService.valid();
+valid = this.formState.valid();
 
-dirty = this.formStateService.dirty();
+dirty = this.formState.dirty();
 
-submitted = this.formStateService.submitted();
+submitted = this.formState.submitted();
 
-submitting = this.formStateService.submitting();
+submitting = this.formState.submitting();
 ```
 
 ## 🚀 Form Submission
 
-Supports both `Promise` and RxJS `Observable`.
+The library supports Promise- and RxJS Observable-based submission workflows.
 
 ```typescript
 await this.formSubmitService.submit(
@@ -134,15 +134,15 @@ await this.formSubmitService.submit(
 const value = getFormValue(this.form);
 ```
 
-### Get Raw Value
+### Get Raw Form Value
 
-Disabled controls are included:
+Includes disabled controls:
 
 ```typescript
 const value = getFormRawValue(this.form);
 ```
 
-### Patch Form
+### Patch Form Values
 
 ```typescript
 patchFormGroup(this.form, {
@@ -156,9 +156,9 @@ patchFormGroup(this.form, {
 resetFormGroup(this.form);
 ```
 
-### Get Dirty Values
+### Extract Dirty Values
 
-Useful when sending only changed fields to an API:
+Useful for sending only changed fields to an API:
 
 ```typescript
 const changes = getDirtyValues(this.form);
@@ -166,17 +166,19 @@ const changes = getDirtyValues(this.form);
 
 ## 📋 FormArray Utilities
 
+Add a control:
+
 ```typescript
 addToFormArray(this.items, this.formBuilder.control(''));
 ```
 
-Remove an item:
+Remove a control:
 
 ```typescript
 removeFromFormArray(this.items, 0);
 ```
 
-Move an item:
+Move a control:
 
 ```typescript
 moveFormArrayControl(this.items, 0, 2);
@@ -186,12 +188,12 @@ moveFormArrayControl(this.items, 0, 2);
 
 ### Builders
 
-- `KudoFormBuilderService`
-- `KudoFormControlBuilderService`
+- `SRFormBuilderService`
+- `SRFormControlBuilderService`
 
 ### Error Handling
 
-- `KudoFormErrorService`
+- `SRFormErrorService`
 - `getErrorKeys()`
 - `getFirstErrorKey()`
 - `getFirstFormError()`
@@ -199,7 +201,7 @@ moveFormArrayControl(this.items, 0, 2);
 
 ### Form State
 
-- `KudoFormStateService`
+- `SRFormErrorService`
 - `getFormState()`
 - `isFormReadyForSubmit()`
 - `canSubmitForm()`
@@ -208,7 +210,7 @@ moveFormArrayControl(this.items, 0, 2);
 
 ### Form Submission
 
-- `KudoFormSubmitService`
+- `SRFormSubmitService`
 
 ### Form Controls
 
@@ -243,7 +245,7 @@ moveFormArrayControl(this.items, 0, 2);
 - `clearFormArray()`
 - `getFormArrayLength()`
 
-### Reset & Patch
+### Reset and Patch
 
 - `resetFormControl()`
 - `resetFormGroup()`
@@ -271,80 +273,40 @@ moveFormArrayControl(this.items, 0, 2);
 
 ## 🌐 Angular Compatibility
 
-| Angular    | Support |
-| ---------- | ------- |
-| Angular 20 | ✅      |
-| Angular 21 | ✅      |
-| Angular 22 | ✅      |
-| Angular 23 | ✅      |
+The package targets Angular 20+.
 
-## About KudoEngineer
+| Angular Version | Support |
+| --------------- | ------- |
+| Angular 20      | ✅      |
+| Angular 21      | ✅      |
+| Angular 22      | ✅      |
+| Angular 23      | ✅      |
 
-**KudoEngineer** is a developer-focused platform created by **Satendra Rajput**, providing modern, reusable and production-ready tools, libraries and resources for developers.
+Check the package peer dependencies for the versions supported by the release you install.
 
-Explore more Angular, Java, Spring Boot, TypeScript and developer tools at:
+## 👨‍💻 Author
 
-**🌐 KudoEngineer:** https://kudoengineer.com <br>
-**📦 NPM Organization:** https://github.com/kudoengineer <br>
-**💼 LinkedIn:** https://www.linkedin.com/in/satendra2rajput/
+**Satendra Rajput**
 
----
+Senior Software Engineer | Angular & Java Spring Boot | Open Source Contributor
 
-## Contributing
+- **Open Source Package:** https://github.com/satendra2rajput/sr-angular-npm/tree/main/projects/forms
+- **LinkedIn:** https://www.linkedin.com/in/satendra2rajput/
 
-Contributions, ideas, bug reports and feature requests are welcome.
+## 🤝 Contributing
 
-If you find an issue or have an idea that can make this package better, feel free to open an issue or submit a pull request.
+Contributions, bug reports, feature requests, and suggestions are welcome.
 
----
+If you find an issue or want to improve the library, please open an issue or submit a pull request in the project's source repository.
 
-## Support the Project
+## 📄 License
 
-If this package helps you build better applications, please consider:
-
-- ⭐ Giving the project a star
-- 📦 Using the package in your projects
-- 🐛 Reporting bugs
-- 💡 Suggesting improvements
-- 🤝 Contributing to the project
-- 📢 Sharing it with other developers
-
-Your support helps **KudoEngineer** continue building open-source developer tools and libraries.
+This project is licensed under the MIT License. See the `LICENSE` file for details.
 
 ---
 
-## License
+**Built with ❤️ by Satendra Rajput**
 
-This project is licensed under the **MIT License**.
+_Reusable Angular form utilities for cleaner, more maintainable applications._
 
-You are free to use, modify and distribute this package according to the terms of the license.
-
----
-
-<div align="center">
-
-### 🚀 Built for Developers by Developers
-
-**Built with ❤️ by [Satendra Rajput](https://kudoengineer.com)**
-
-**KudoEngineer — Modern Developer Tools & Open Source Libraries**
-
-🌐 **[Website](https://kudoengineer.com)**
-📦 **[NPM Packages](https://www.npmjs.com/org/kudoengineer)**
-💼 **[LinkedIn](https://www.linkedin.com/in/satendrarajput/)**
-
-<br>
-
-**Angular • TypeScript • Java • Spring Boot • Developer Tools • Open Source • NPM Packages**
-
-<br>
-
-© 2026 **KudoEngineer** · Created and maintained by **Satendra Rajput**
-
-</div>
-
----
-
-### Keywords
-
-`KudoEngineer` · `Angular` · `Angular Library` · `Angular NPM Package` · `TypeScript` · `JavaScript` · `Developer Tools` · `Open Source` · `NPM Package` · `Angular Components` · `Web Development` · `Frontend Development` · `Software Development`
+**Keywords:** Angular, Reactive Forms, Angular Forms, TypeScript, Form Validation, FormBuilder, FormControl, FormGroup, FormArray, Angular Signals, npm Package, Open Source

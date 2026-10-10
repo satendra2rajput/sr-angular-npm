@@ -1,20 +1,23 @@
-import { Injectable } from '@angular/core';
-import { AbstractControl, FormArray, FormGroup } from '@angular/forms';
+import { Injectable } from "@angular/core";
+import { AbstractControl, FormArray, FormGroup } from "@angular/forms";
 
-import { getDefaultErrorMessage } from './form-error.utils';
-import { KudoFormError } from '../models/form-state.model';
+import { getDefaultErrorMessage } from "./form-error.utils";
+import { SRFormError } from "../models/form-state.model";
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: "root",
 })
-export class KudoFormErrorService {
+export class SRFormErrorService {
   /**
    * Get all validation errors from a form.
    */
-  getErrors(form: FormGroup, messages: Record<string, string> = {}): KudoFormError[] {
-    const errors: KudoFormError[] = [];
+  getErrors(
+    form: FormGroup,
+    messages: Record<string, string> = {},
+  ): SRFormError[] {
+    const errors: SRFormError[] = [];
 
-    this.collectErrors(form, '', errors, messages);
+    this.collectErrors(form, "", errors, messages);
 
     return errors;
   }
@@ -22,7 +25,10 @@ export class KudoFormErrorService {
   /**
    * Get the first validation error from a form.
    */
-  getFirstError(form: FormGroup, messages: Record<string, string> = {}): KudoFormError | null {
+  getFirstError(
+    form: FormGroup,
+    messages: Record<string, string> = {},
+  ): SRFormError | null {
     const errors = this.getErrors(form, messages);
 
     return errors.length > 0 ? errors[0] : null;
@@ -41,7 +47,7 @@ export class KudoFormErrorService {
   private collectErrors(
     control: AbstractControl,
     path: string,
-    errors: KudoFormError[],
+    errors: SRFormError[],
     messages: Record<string, string>,
   ): void {
     if (control instanceof FormGroup) {

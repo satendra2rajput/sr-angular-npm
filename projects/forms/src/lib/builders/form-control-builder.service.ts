@@ -1,12 +1,12 @@
-import { Injectable } from '@angular/core';
-import { FormControl, ValidatorFn, AsyncValidatorFn } from '@angular/forms';
+import { Injectable } from "@angular/core";
+import { FormControl, ValidatorFn, AsyncValidatorFn } from "@angular/forms";
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: "root",
 })
-export class KudoFormControlBuilderService {
+export class SRFormControlBuilderService {
   text(
-    value: string = '',
+    value: string = "",
     validators: ValidatorFn[] = [],
     asyncValidators: AsyncValidatorFn[] = [],
   ): FormControl<string> {
@@ -18,7 +18,7 @@ export class KudoFormControlBuilderService {
   }
 
   email(
-    value: string = '',
+    value: string = "",
     validators: ValidatorFn[] = [],
     asyncValidators: AsyncValidatorFn[] = [],
   ): FormControl<string> {

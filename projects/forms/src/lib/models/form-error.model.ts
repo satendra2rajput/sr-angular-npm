@@ -1,4 +1,4 @@
-export interface KudoFormState {
+export interface SRFormState {
   valid: boolean;
 
   invalid: boolean;

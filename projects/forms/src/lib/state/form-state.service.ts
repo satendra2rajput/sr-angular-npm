@@ -1,15 +1,15 @@
-import { Injectable, computed, signal } from '@angular/core';
+import { Injectable, computed, signal } from "@angular/core";
 
-import { AbstractControl } from '@angular/forms';
+import { AbstractControl } from "@angular/forms";
 
-import { getFormState } from './form-state.utils';
-import { KudoFormState } from '../models/form-error.model';
+import { getFormState } from "./form-state.utils";
+import { SRFormState } from "../models/form-error.model";
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: "root",
 })
-export class KudoFormStateService {
-  private readonly _state = signal<KudoFormState>({
+export class SRFormStateService {
+  private readonly _state = signal<SRFormState>({
     valid: false,
     invalid: false,
     pristine: true,
@@ -47,7 +47,11 @@ export class KudoFormStateService {
   /**
    * Connect an Angular control/form to the state service.
    */
-  update(control: AbstractControl, submitted = false, submitting = false): void {
+  update(
+    control: AbstractControl,
+    submitted = false,
+    submitting = false,
+  ): void {
     this._state.set(getFormState(control, submitted, submitting));
   }
 

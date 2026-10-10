@@ -1,6 +1,6 @@
 {
-  "name": "@kudoengineer/forms",
-  "version": "0.0.1",
+  "name": "@satendra2rajput/forms",
+  "version": "1.0.1",
   "description": "A modern Angular forms utility library with typed form helpers, builders, validation errors, form state, submission handling, reset, patch and value utilities.",
   "keywords": [
     "angular",
@@ -10,7 +10,7 @@
     "form-builder",
     "form-validation",
     "typescript",
-    "kudoengineer"
+    "satendra2rajput"
   ],
   "peerDependencies": {
     "@angular/common": "^20.0.0 || ^21.0.0 || ^22.0.0 || ^23.0.0",

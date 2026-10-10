@@ -1,5 +1,5 @@
-import { AbstractControl } from '@angular/forms';
-import { KudoFormState } from '../models/form-error.model';
+import { AbstractControl } from "@angular/forms";
+import { SRFormState } from "../models/form-error.model";
 
 /**
  * Get the current state of a form control.
@@ -8,7 +8,7 @@ export function getFormState(
   control: AbstractControl,
   submitted = false,
   submitting = false,
-): KudoFormState {
+): SRFormState {
   return {
     valid: control.valid,
 
@@ -35,14 +35,20 @@ export function getFormState(
 /**
  * Check whether the form is ready for submission.
  */
-export function isFormReadyForSubmit(control: AbstractControl, submitting = false): boolean {
+export function isFormReadyForSubmit(
+  control: AbstractControl,
+  submitting = false,
+): boolean {
   return control.valid && !control.disabled && !control.pending && !submitting;
 }
 
 /**
  * Check whether the form can currently be submitted.
  */
-export function canSubmitForm(control: AbstractControl, submitting = false): boolean {
+export function canSubmitForm(
+  control: AbstractControl,
+  submitting = false,
+): boolean {
   return isFormReadyForSubmit(control, submitting);
 }
 
@@ -56,6 +62,9 @@ export function hasFormInteraction(control: AbstractControl): boolean {
 /**
  * Check whether the form is currently processing.
  */
-export function isFormProcessing(control: AbstractControl, submitting = false): boolean {
+export function isFormProcessing(
+  control: AbstractControl,
+  submitting = false,
+): boolean {
   return control.pending || submitting;
 }

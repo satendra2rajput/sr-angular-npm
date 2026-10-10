@@ -1,5 +1,5 @@
-import { AbstractControl, ValidationErrors } from '@angular/forms';
-import { KudoFormError } from '../models/form-state.model';
+import { AbstractControl, ValidationErrors } from "@angular/forms";
+import { SRFormError } from "../models/form-state.model";
 
 /**
  * Get all validation error keys from a control.
@@ -31,14 +31,19 @@ export function getFirstErrorKey(control: AbstractControl): string | null {
 /**
  * Get the value of a specific validation error.
  */
-export function getErrorValue(control: AbstractControl, errorKey: string): unknown {
+export function getErrorValue(
+  control: AbstractControl,
+  errorKey: string,
+): unknown {
   return control.getError(errorKey);
 }
 
 /**
  * Convert validation errors into a simple key-value object.
  */
-export function normalizeErrors(errors: ValidationErrors | null): Record<string, unknown> {
+export function normalizeErrors(
+  errors: ValidationErrors | null,
+): Record<string, unknown> {
   if (!errors) {
     return {};
   }
@@ -47,7 +52,7 @@ export function normalizeErrors(errors: ValidationErrors | null): Record<string,
 }
 
 /**
- * Create a KudoFormError object.
+ * Create a SRFormError object.
  */
 export function createFormError(
   controlName: string,
@@ -55,7 +60,7 @@ export function createFormError(
   message: string,
   value?: unknown,
   params?: Record<string, unknown>,
-): KudoFormError {
+): SRFormError {
   return {
     controlName,
     errorKey,
@@ -66,13 +71,13 @@ export function createFormError(
 }
 
 /**
- * Get the first KudoFormError from a control.
+ * Get the first SRFormError from a control.
  */
 export function getFirstFormError(
   control: AbstractControl,
   controlName: string,
   messages: Record<string, string> = {},
-): KudoFormError | null {
+): SRFormError | null {
   const errorKey = getFirstErrorKey(control);
 
   if (!errorKey) {
@@ -91,16 +96,16 @@ export function getFirstFormError(
  */
 export function getDefaultErrorMessage(errorKey: string): string {
   const messages: Record<string, string> = {
-    required: 'This field is required.',
-    email: 'Please enter a valid email address.',
-    minlength: 'The value is too short.',
-    maxlength: 'The value is too long.',
-    min: 'The value is below the minimum allowed.',
-    max: 'The value is above the maximum allowed.',
-    pattern: 'The value format is invalid.',
-    mismatch: 'The values do not match.',
-    passwordMismatch: 'Passwords do not match.',
+    required: "This field is required.",
+    email: "Please enter a valid email address.",
+    minlength: "The value is too short.",
+    maxlength: "The value is too long.",
+    min: "The value is below the minimum allowed.",
+    max: "The value is above the maximum allowed.",
+    pattern: "The value format is invalid.",
+    mismatch: "The values do not match.",
+    passwordMismatch: "Passwords do not match.",
   };
 
-  return messages[errorKey] ?? 'This field is invalid.';
+  return messages[errorKey] ?? "This field is invalid.";
 }

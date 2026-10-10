@@ -1,7 +1,7 @@
-import { KudoFormConfig } from '../models/form-config.model';
+import { SRFormConfig } from "../models/form-config.model";
 
-export const DEFAULT_FORM_CONFIG: Required<KudoFormConfig> = {
-  validateOn: 'change',
+export const DEFAULT_FORM_CONFIG: Required<SRFormConfig> = {
+  validateOn: "change",
   markAllAsTouchedOnSubmit: true,
   resetAfterSubmit: false,
   emitEventOnReset: true,
@@ -10,7 +10,7 @@ export const DEFAULT_FORM_CONFIG: Required<KudoFormConfig> = {
   errorMessages: {},
 };
 
-export function mergeFormConfig(config?: KudoFormConfig): Required<KudoFormConfig> {
+export function mergeFormConfig(config?: SRFormConfig): Required<SRFormConfig> {
   return {
     ...DEFAULT_FORM_CONFIG,
     ...config,

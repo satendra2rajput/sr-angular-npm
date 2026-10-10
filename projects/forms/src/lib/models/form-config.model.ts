@@ -1,5 +1,5 @@
-export interface KudoFormConfig {
-  validateOn?: 'change' | 'blur' | 'submit';
+export interface SRFormConfig {
+  validateOn?: "change" | "blur" | "submit";
 
   markAllAsTouchedOnSubmit?: boolean;
 

@@ -1,4 +1,4 @@
-export interface KudoFormError {
+export interface SRFormError {
   controlName: string;
 
   errorKey: string;
