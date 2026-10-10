@@ -288,10 +288,11 @@ Check the package peer dependencies for the versions supported by the release yo
 
 **Satendra Rajput**
 
-Senior Software Engineer | Angular & Java Spring Boot | Open Source Contributor
+Senior Software Engineer | Angular & Java Spring Boot Developer | Microservices | Banking & Fintech — Axis Bank LOS, ADCB LOS, AEPS, Micro-ATM, RBAC | Open Source Contributor
 
-- **Open Source Package:** https://github.com/satendra2rajput/sr-angular-npm/tree/main/projects/forms
+- **Website:** https://www.satendra2rajput.com/
 - **LinkedIn:** https://www.linkedin.com/in/satendra2rajput/
+- **Open Source Package:** https://github.com/satendra2rajput/sr-angular-npm/tree/main/projects/forms
 
 ## 🤝 Contributing
 
